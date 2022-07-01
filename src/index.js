@@ -15,8 +15,10 @@ $(document).ready(function() {
         return 
       } else if (!Number(amount)) {
         $("#test").text(`Please enter a number!`);
+        return
       } else if (Math.sign(amount) !== 1) {
         $("#test").text(`Please enter a positive value!`);
+        return
       } else {
         let response = await Rate.getRate(country1,country2,amount);
         if (response.conversion_result) {
