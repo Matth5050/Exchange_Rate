@@ -1,8 +1,8 @@
-# (Application Name)
+# Exchange Rate Calculator
 
-#### (Brief Description of Application)
+#### Converts user inputted amounts of a user selected currency pair
 
-#### By (Your Name Here)
+#### By Matt Herbert
 
 ## Technologies Used
 
@@ -24,15 +24,18 @@
 * Enter $ npm install
 * Enter $ npm run build
 * To run in browser enter $ npm run start
-* To use jest testing enter $ npm run test
+
+* Next you must go to [ExchangeRate-api.com](https://app.exchangerate-api.com/dashboard) and create an account
+* After registering an account you may use the api key they provide in this program
+* Store your key in a .env folder like this API_KEY={your api key}  (do not include curly brackets)
+* Now you may run the program
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* Currently no know bugs
+
 
 ## License
 
 [MIT](https://opensource.org/osd)
 
-## Contact Information
