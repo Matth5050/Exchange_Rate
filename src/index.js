@@ -18,6 +18,8 @@ async function makeApiCall(country1,country2,amount) {
   getElements(amount,response);
 }
 
+
+
 $(document).ready(function() {
   $('#btn').click(function() {
     const country1 = $('#currency1').val();
