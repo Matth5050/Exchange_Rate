@@ -4,19 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Rate from './js/rates.js';
 
-function getElements(response) {
+function getElements(amount, response) {
   if (response.conversion_result) {
-    $('#test').text(`The test is ${response.conversion_result}`);
+    $('#test').text(`${amount} ${response.base_code} to ${response.target_code} is ${response.conversion_result}`);
     
   } else {
     $('#test2').text(`There was an error: ${response}`);
-    console.log('here');
   }
 }
 
 async function makeApiCall(country1,country2,amount) {
   const response = await Rate.getRate(country1,country2,amount);
-  getElements(response);
+  getElements(amount,response);
 }
 
 $(document).ready(function() {
