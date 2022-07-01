@@ -7,33 +7,53 @@
   <title>Exchange Rate</title>
 </head>
 <body>
+  <div class="jumbotron">
+    <h1>Currency Converter</h1>
+    <h3>Select a currency and view the current conversion rate!</h3>
+  </div>
   <div class="container">
-    <label for="cars">Choose a car:</label>
-    <select name="country1" id="currency1">
-      <option value="USD">United States Dollar (USD)</option>
-      <option value="TWD">Taiwan Dollar (TWD)</option>
-      <option value="EUR">Euro (EUR)</option>
-      <option value="GBP">Pound Sterling (GBP)</option>
-      <option value="JOD">Jordanian Pound (JOD)</option>
-      <option value="NGN">Nigerian Naira (NGN)</option>
-      <option value="ZB">Zuck Bucks (ZB)</option>
-    </select>
-    <select name="country1" id="currency2">
-      <option value="USD">United States Dollar (USD)</option>
-      <option value="TWD">Taiwan Dollar (TWD)</option>
-      <option value="EUR">Euro (EUR)</option>
-      <option value="GBP">Pound Sterling (GBP)</option>
-      <option value="JOD">Jordanian Pound (JOD)</option>
-      <option value="NGN">Nigerian Naira (NGN)</option>
-      <option value="NGN">Nigerian Naira (NGN)</option>
-      <option value="ZB">Zuck Bucks (ZB)</option>
-    </select>
-    <input type="number" placeholder="amount" id="amount">
-    <div class="output">
-      <p id="test"></p>
-      <p id="test2"></p>
+    <div class="row">
+      <div class="col">
+        <label for="country1">Choose a currency:</label>
+        <select name="country1" id="currency1">
+          <option value="USD">United States Dollar (USD)</option>
+          <option value="TWD">Taiwan Dollar (TWD)</option>
+          <option value="EUR">Euro (EUR)</option>
+          <option value="GBP">Pound Sterling (GBP)</option>
+          <option value="JOD">Jordanian Pound (JOD)</option>
+          <option value="NGN">Nigerian Naira (NGN)</option>
+          <option value="ZB">Zuck Bucks (ZB)</option>
+        </select>
+      </div>
     </div>
-    <button type="click" id="btn">click</button>
+    <div class="row">
+      <div class="col">
+        <label for="country2">Choose a currency:</label>
+        <select name="country2" id="currency2">
+          <option value="USD">United States Dollar (USD)</option>
+          <option value="TWD">Taiwan Dollar (TWD)</option>
+          <option value="EUR">Euro (EUR)</option>
+          <option value="GBP">Pound Sterling (GBP)</option>
+          <option value="JOD">Jordanian Pound (JOD)</option>
+          <option value="NGN">Nigerian Naira (NGN)</option>
+          <option value="ZB">Zuck Bucks (ZB)</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="number" placeholder="amount to convert" id="amount">
+      </div>
+    </div>
+    <div class="col">
+      <button type="click" id="btn" class="btn btn-outline-primary">Convert!</button>
+    </div>
+    <div class="row">
+      <div class="output col">
+        <p id="test"></p>
+        <p id="test2"></p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
