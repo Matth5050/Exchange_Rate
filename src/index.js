@@ -4,10 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Rate from './js/rates.js';
 
-
 $(document).ready(function() {
     $('#btn').click(async function() {
-
     const country1 = $('#currency1').val();
     const country2 = $('#currency2').val();
     const amount = $('#amount').val();
@@ -22,11 +20,10 @@ $(document).ready(function() {
       } else {
         let response = await Rate.getRate(country1,country2,amount);
         if (response.conversion_result) {
-        $('#test').text(`${amount} ${response.base_code} to ${response.target_code} is ${response.conversion_result}`);
+        $('#test').text(`${amount} ${response.base_code} = ${response.conversion_result} ${response.target_code}`);
         } else {
         $('#test2').text(`There was an error: ${response}`);
         } 
       }
   });
 });
-//zz
