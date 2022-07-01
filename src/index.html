@@ -7,9 +7,33 @@
   <title>Exchange Rate</title>
 </head>
 <body>
-  <div class="output">
-    <p id="test"></p>
+  <div class="container">
+    <label for="cars">Choose a car:</label>
+    <select name="country1" id="currency1">
+      <option value="USD">United States Dollar (USD)</option>
+      <option value="TWD">Taiwan Dollar (TWD)</option>
+      <option value="EUR">Euro (EUR)</option>
+      <option value="GBP">Pound Sterling (GBP)</option>
+      <option value="JOD">Jordanian Pound (JOD)</option>
+    </select>
+    <select name="country1" id="currency2">
+      <option value="USD">United States Dollar (USD)</option>
+      <option value="TWD">Taiwan Dollar (TWD)</option>
+      <option value="EUR">Euro (EUR)</option>
+      <option value="GBP">Pound Sterling (GBP)</option>
+      <option value="JOD">Jordanian Pound (JOD)</option>
+    </select>
+
+
+
+
+    <input type="text" placeholder="country 1" id="c1">
+    <input type="text" placeholder="country 2" id="c2">
+    <input type="number" placeholder="amount" id="amount">
+    <div class="output">
+      <p id="test"></p>
+    </div>
+    <button type="click" id="btn">click</button>
   </div>
-  <button type="click" id="btn">click</button>
 </body>
 </html>

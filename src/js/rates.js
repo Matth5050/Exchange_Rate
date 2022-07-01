@@ -1,7 +1,7 @@
 export default class Rate {
-    static async getRate() {
+    static async getRate(country1,country2,amount) {
       try {
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/EUR/5`);
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${country1}/${country2}/${amount}`);
         if (!response.ok) {
           throw Error(response.statusText);
         }

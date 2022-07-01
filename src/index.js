@@ -13,13 +13,16 @@ function getElements(response) {
   }
 }
 
-async function makeApiCall() {
-  const response = await Rate.getRate();
+async function makeApiCall(country1,country2,amount) {
+  const response = await Rate.getRate(country1,country2,amount);
   getElements(response);
 }
 
 $(document).ready(function() {
   $('#btn').click(function() {
-    makeApiCall();
+    const country1 = $('#c1').val();
+    const country2 = $('#c2').val();
+    const amount = $('#amount').val();
+    makeApiCall(country1,country2, amount);
   });
 });
