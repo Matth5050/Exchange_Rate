@@ -3,8 +3,7 @@ export default class Rate {
       try {
         const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${country1}/${country2}/${amount}`);
         if (!response.ok) {
-          console.log(response.statusText);
-          throw Error(response.statusText);
+          throw Error(response.status);
         }
         return response.json();
       } catch(error) {
