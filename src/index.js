@@ -3,6 +3,43 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Rate from './js/rates.js';
+import Coin from './js/coin.js';
+
+
+function displayData(data) {
+    // const keys = Object.keys(data);
+    // console.log(data);
+    // const coinData = data[key];
+    // Object.keys(data).forEach(key => $('.coinOut').append(`<p>${key}: ${coinData}</p>`));
+    const preferenceRank = Object.fromEntries(
+        Object.entries(data).map(([key, { USD }]) => [USD, key])
+      )
+      console.Console.log(preferenceRank);
+    }
+    
+
+function getElements(data) {
+    if (data) {
+      displayData(data);
+    } else {
+      console.log("no");
+    }
+  }
+
+async function coinPrice() {
+    const response = await Coin.getCoinRate();
+    return response;
+   
+}
+
+function grabCoinPrice() {
+    let result = coinPrice();
+    result.then(function(data) {
+        getElements(data)
+    })
+}
+
+grabCoinPrice();
 
 $(document).ready(function() {
     $('#btn').click(async function() {

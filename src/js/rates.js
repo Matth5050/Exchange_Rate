@@ -10,4 +10,4 @@ export default class Rate {
         return error.message;
       }
     }
-  }
+}
