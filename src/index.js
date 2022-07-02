@@ -7,29 +7,26 @@ import Coin from './js/coin.js';
 
 
 function displayData(data) {
-    // const keys = Object.keys(data);
-    // console.log(data);
-    // const coinData = data[key];
-    // Object.keys(data).forEach(key => $('.coinOut').append(`<p>${key}: ${coinData}</p>`));
-    const preferenceRank = Object.fromEntries(
-        Object.entries(data).map(([key, { USD }]) => [USD, key])
-      )
-      console.Console.log(preferenceRank);
+    for (const property in data) {
+        $('.coinOut').append(`<p class="${property}"><b>${property}:<b></p>`);
+        Object.keys(data[property]).forEach(key => {
+            $('.coinOut').append(`<p class="${property}">${key}: ${data[property][key]}</p>`);
+        })
     }
-    
+}
+    //zz
 
 function getElements(data) {
     if (data) {
       displayData(data);
     } else {
-      console.log("no");
+      $('.coinOut').append(`<p>There was an error loading crypto data</p>`);
     }
-  }
+}
 
 async function coinPrice() {
     const response = await Coin.getCoinRate();
-    return response;
-   
+    return response; 
 }
 
 function grabCoinPrice() {
@@ -39,9 +36,10 @@ function grabCoinPrice() {
     })
 }
 
-grabCoinPrice();
+
 
 $(document).ready(function() {
+    grabCoinPrice();
     $('#btn').click(async function() {
     const country1 = $('#currency1').val();
     const country2 = $('#currency2').val();
@@ -60,8 +58,10 @@ $(document).ready(function() {
         let response = await Rate.getRate(country1,country2,amount);
         if (response.conversion_result) {
         $('#test').text(`${amount} ${response.base_code} = ${response.conversion_result} ${response.target_code}`);
+        $('.output').slideDown();
         } else {
         $('#test2').text(`There was an error: ${response}`);
+        $('.output').slideDown();
         } 
       }
   });
