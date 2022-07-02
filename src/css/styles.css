@@ -2,6 +2,14 @@
     text-align: center;
   }
 
+#inputContainer {
+  text-align: center;
+} 
+
+.inputDiv {
+  margin-bottom: 20px;
+}
+
 .row {
   margin-bottom: 20px;
 }
@@ -10,6 +18,14 @@
     text-align: center;
   }
 
-  .output {
-    margin-top: 20px;
-  }
+.output {
+    margin-top: 40px;
+    display: none;
+}
+
+.BTC, .ETH, .ADA {
+  text-align: left;
+}
+
+
+
