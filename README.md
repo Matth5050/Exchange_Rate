@@ -4,6 +4,8 @@
 
 #### By Matt Herbert
 
+#### View the page [here](https://matth5050.github.io/Exchange_Rate/)
+
 ## Technologies Used
 
 * HTML
