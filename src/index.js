@@ -56,8 +56,11 @@ $(document).ready(function() {
         return
       } else {
         let response = await Rate.getRate(country1,country2,amount);
+        sessionStorage.setItem(response,response.conversion_result);
+        let storage = sessionStorage.getItem(response);
+        console.log(storage);
         if (response.conversion_result) {
-        $('#test').text(`${amount} ${response.base_code} = ${response.conversion_result} ${response.target_code}`);
+        $('#test').text(`${amount} ${country1} = ${storage} ${country2}`);
         $('.output').slideDown();
         } else {
         $('#test2').text(`There was an error: ${response}`);
@@ -66,3 +69,4 @@ $(document).ready(function() {
       }
   });
 });
+//zz
