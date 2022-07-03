@@ -1,6 +1,6 @@
 # Exchange Rate Calculator
 
-#### Converts user inputted amounts of a user selected currency pair
+#### Converts user inputted amounts of a user selected currency pair as well as dislaying current crypto price data
 
 #### By Matt Herbert
 
@@ -16,6 +16,7 @@
 * Jest
 * Javascript
 * Jquery
+* API
 
 ## Description
 
@@ -27,9 +28,15 @@
 * Enter $ npm run build
 * To run in browser enter $ npm run start
 
+#### Getting curency API key
 * Next you must go to [ExchangeRate-api.com](https://app.exchangerate-api.com/dashboard) and create an account
 * After registering an account you may use the api key they provide in this program
-* Store your key in a .env folder like this API_KEY={your api key}  (do not include curly brackets)
+* Store your key in a .env folder like this CURRENCY_API_KEY={your api key}  (do not include curly brackets)
+
+#### Getting crypto curency API key
+* Next you must go to [Cryptocompare.com](https://min-api.cryptocompare.com/) and create an account
+* After registering an account you may use the api key they provide in this program
+* Store your key in a .env folder like this CRYPTO_API_KEY={your api key}  (do not include curly brackets)
 * Now you may run the program
 
 ## Known Bugs
