@@ -5,7 +5,6 @@ import './css/styles.css';
 import Rate from './js/rates.js';
 import Coin from './js/coin.js';
 
-
 function displayData(data) {
     for (const property in data) {
         $('.coinOut').append(`<p class="${property}"><b>${property}:<b></p>`);
@@ -14,7 +13,6 @@ function displayData(data) {
         })
     }
 }
-    //zz
 
 function getElements(data) {
     if (data) {
@@ -36,8 +34,6 @@ function grabCoinPrice() {
     })
 }
 
-
-
 $(document).ready(function() {
     grabCoinPrice();
     $('#btn').click(async function() {
@@ -58,7 +54,6 @@ $(document).ready(function() {
         let response = await Rate.getRate(country1,country2,amount);
         sessionStorage.setItem(response,response.conversion_result);
         let storage = sessionStorage.getItem(response);
-        console.log(storage);
         if (response.conversion_result) {
         $('#test').text(`${amount} ${country1} = ${storage} ${country2}`);
         $('.output').slideDown();
@@ -69,4 +64,3 @@ $(document).ready(function() {
       }
   });
 });
-//zz
