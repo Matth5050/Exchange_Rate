@@ -1,6 +1,6 @@
 .jumbotron {
-    text-align: center;
-  }
+  text-align: center;
+}
 
 #inputContainer {
   text-align: center;
@@ -15,12 +15,12 @@
 }
 
 .col {
-    text-align: center;
-  }
+  text-align: center;
+}
 
 .output {
-    margin-top: 40px;
-    display: none;
+  margin-top: 40px;
+  display: none;
 }
 
 .BTC, .ETH, .ADA {
