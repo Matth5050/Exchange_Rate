@@ -25,7 +25,7 @@
 * Clone this repository to your desktop
 * Open repo folder in your text editor of choice
 * Enter $ npm install
-* NOTE: WIndows users need to replace the semi-colon with an ampersand after the word build in line 8 of the package.json as seen here ```"start": "npm run build & webpack-dev-server --open --mode development",```
+* NOTE: Windows users need to replace the semi-colon with an ampersand after the word build in line 8 of the package.json as seen here ```"start": "npm run build & webpack-dev-server --open --mode development",```
 * Enter $ npm run build
 * To run in browser enter $ npm run start
 
